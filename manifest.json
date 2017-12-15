@@ -1,8 +1,13 @@
 {
 	"manifest_vesrion": 2,
 	"name": "Test Extension",
-	"version": 1
-	
-
-
+	"version": 1,
+	"content-scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": ["content.js"]
+		}
+	]
 }
