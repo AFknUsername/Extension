@@ -1,4 +1,4 @@
 # Extension
 
-My browser extension \n
-This is a test
+My browser extension.
+This is a test.
