@@ -1,0 +1,340 @@
+{
+    "length": {
+        "milimeter": {
+            "value": 0.001,
+            "unit": "mm"
+        },
+        "centimeter": {
+            "value": 0.01,
+            "unit": "cm"
+        },
+        "meter": {
+            "value": 1,
+            "unit": "m"
+        },
+        "kilometer": {
+            "value": 1000,
+            "unit": "km"
+        },
+        "inch": {
+            "value": 0.0254,
+            "unit": "in"
+        },
+        "foot": {
+            "value": 0.3048,
+            "unit": "ft"
+        },
+        "yard": {
+            "value": 0.9144,
+            "unit": "yd"
+        },
+        "mile": {
+            "value": 1609.344,
+            "unit": "mi"
+        }
+    },
+    "area": {
+        "square centimeter": {
+            "value": 0.0001,
+            "unit": "sq cm"
+        },
+        "square meter": {
+            "value": 1,
+            "unit": "sq m"
+        },
+        "square kilometer": {
+            "value": 1000000,
+            "unit": "sq km"
+        },
+        "square inch": {
+            "value": 0.00064516,
+            "unit": "sq in"
+        },
+        "square foot": {
+            "value": 0.09290304,
+            "unit": "sq ft"
+        },
+        "square yard": {
+            "value": 0.83612734,
+            "unit": "sq yd"
+        },
+        "square mile": {
+            "value": 2589988,
+            "unit": "sq mi"
+        },
+        "hectare": {
+            "value": 10000,
+            "unit": "mL"
+        },
+        "acre": {
+            "value": 4046.8564,
+            "unit": "mL"
+        }
+    },
+    "volume": {
+        "milliliter": {
+            "value": 0.001,
+            "unit": "mL"
+        },
+        "cubic centimeter": {
+            "value": 0.001,
+            "unit": "cu cm"
+        },
+        "centiliter": {
+            "value": 0.01,
+            "unit": "cL"
+        },
+        "liter": {
+            "value": 1,
+            "unit": "L"
+        },
+        "cubic meter": {
+            "value": 1000,
+            "unit": "cu m"
+        },
+        "cubic inch": {
+            "value": 0.016387064,
+            "unit": "cu in"
+        },
+        "cubic foot": {
+            "value": 28.316847,
+            "unit": "cu ft"
+        },
+        "cubic yard": {
+            "value": 764.5549,
+            "unit": "cu yd"
+        },
+        "imperial teaspoon": {
+            "value": 0.004928922,
+            "unit": "IM-tsp"
+        },
+        "US teaspoon": {
+            "value": 0.005919388,
+            "unit": "US-tsp"
+        },
+        "imperial tablespoon": {
+            "value": 0.017758165,
+            "unit": "IM-tbsp"
+        },
+        "US tablespoon": {
+            "value": 0.014786765,
+            "unit": "US-tbsp"
+        },
+        "imperial fluid ounce": {
+            "value": 0.028413063,
+            "unit": "IM-fl oz"
+        },
+        "US fluid ounce": {
+            "value": 0.02957353,
+            "unit": "US-fl oz"
+        },
+        "imperial pint": {
+            "value": 0.56826127,
+            "unit": "IM-pt"
+        },
+        "US pint": {
+            "value": 0.47317648,
+            "unit": "US-pt"
+        },
+        "imperial quart": {
+            "value": 1.1365225,
+            "unit": "IM-qt"
+        },
+        "US quart": {
+            "value": 0.94635296,
+            "unit": "US-qt"
+        },
+        "imperial gallon": {
+            "value": 4.54609,
+            "unit": "IM-gal"
+        },
+        "US gallon": {
+            "value": 3.7854118,
+            "unit": "US-gal"
+        }
+    },
+    "mass": {
+        "milligram": {
+            "value": 0.001,
+            "unit": "mg"
+        },
+        "gram": {
+            "value": 1,
+            "unit": "g"
+        },
+        "kilogram": {
+            "value": 1000,
+            "unit": "kg"
+        },
+        "ounce": {
+            "value": 28.349524,
+            "unit": "oz"
+        },
+        "pound": {
+            "value": 453.59238,
+            "unit": "lb"
+        },
+        "stone": {
+            "value": 6350.293,
+            "unit": "st"
+        },
+        "tonne": {
+            "value": 1000000,
+            "unit": "t"
+        },
+        "imperial ton": {
+            "value": 1016046.94,
+            "unit": "IM-tn"
+        },
+        "US ton": {
+            "value": 907184.75,
+            "unit": "US-tn"
+        }
+    },
+    "time": {
+        "milisecond": {
+            "value": 0.001,
+            "unit": "ms"
+        },
+        "second": {
+            "value": 1,
+            "unit": "sec"
+        },
+        "minute": {
+            "value": 60,
+            "unit": "min"
+        },
+        "hour": {
+            "value": 3600,
+            "unit": "h"
+        },
+        "day": {
+            "value": 86400,
+            "unit": "d"
+        },
+        "week": {
+            "value": 604800,
+            "unit": "wk"
+        },
+        "month": {
+            "value": 2592000,
+            "unit": "mo"
+        },
+        "year": {
+            "value": 31557600,
+            "unit": "yr"
+        },
+        "decade": {
+            "value": 315576000,
+            "unit": "dec"
+        },
+        "century": {
+            "value": 3155760000,
+            "unit": "c"
+        }
+    },
+    "speed": {
+        "meter per second": {
+            "value": 1,
+            "unit": "m/s"
+        },
+        "kilometer per hour": {
+            "value": 0.277778,
+            "unit": "km/h"
+        },
+        "foot per second": {
+            "value": 0.30480024,
+            "unit": "fps"
+        },
+        "mile per hour": {
+            "value": 0.44704,
+            "unit": "mph"
+        },
+        "knot": {
+            "value": 0.5144448,
+            "unit": "kn"
+        },
+        "speed of sound": {
+            "value": 343.2,
+            "unit": "s"
+        },
+        "speed of light": {
+            "value": 299792458,
+            "unit": "c"
+        }
+    },
+    "temperature": {
+        "celcius": {
+            "value": 274.15,
+            "unit": "C"
+        },
+        "fahrenheit": {
+            "value": 255.92778,
+            "unit": "F"
+        },
+        "kelvin": {
+            "value": 1,
+            "unit": "K"
+        }
+    },
+    "storage": {
+        "bit": {
+            "value": 0.0000001192,
+            "unit": "bit"
+        },
+        "byte": {
+            "value": 0.0000009537,
+            "unit": "B"
+        },
+        "kilobit": {
+            "value": 0.0001221,
+            "unit": "kbit"
+        },
+        "kilobyte": {
+            "value": 0.0009766,
+            "unit": "kB"
+        },
+        "megabit": {
+            "value": 0.125,
+            "unit": "Mbit"
+        },
+        "megabyte": {
+            "value": 1,
+            "unit": "MB"
+        },
+        "gigabit": {
+            "value": 128,
+            "unit": "Gbit"
+        },
+        "gigabyte": {
+            "value": 1024,
+            "unit": "GB"
+        },
+        "terabit": {
+            "value": 131072,
+            "unit": "Tbit"
+        },
+        "terabyte": {
+            "value": 1048576,
+            "unit": "TB"
+        }
+    },
+    "frequency": {
+        "hertz": {
+            "value": 0.000001,
+            "unit": "Hz"
+        },
+        "kilohertz": {
+            "value": 0.001,
+            "unit": "kHz"
+        },
+        "megahertz": {
+            "value": 1,
+            "unit": "MHz"
+        },
+        "gigahertz": {
+            "value": 1000,
+            "unit": "GHz"
+        }
+    }
+}
