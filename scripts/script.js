@@ -3,5 +3,7 @@ console.log('what')
 window.addEventListener('load', setup);
 
 function setup() {
-    alert('what');
+    $('button#but').on('click', function() {
+        alert('pressed');
+    });
 }
