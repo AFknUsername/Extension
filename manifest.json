@@ -1,5 +1,5 @@
 {
-	"manifest_vesrion": 2,
+	"manifest_version": 2,
 	"name": "Test Extension",
 	"version": 1,
 	"chrome_url_overrides" : {
