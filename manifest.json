@@ -2,12 +2,7 @@
 	"manifest_vesrion": 2,
 	"name": "Test Extension",
 	"version": 1,
-	"content-scripts": [
-		{
-			"matches": [
-				"<all_urls>"
-			],
-			"js": ["content.js"]
-		}
-	]
+	"chrome_url_overrides" : {
+		"newtab": "index.html"
+	}
 }
