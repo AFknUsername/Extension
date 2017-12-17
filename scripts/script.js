@@ -15,7 +15,7 @@ function loadConvertOptions() {
             document.getElementById('units').options[i] = new Option(Object.keys(json[i]), i);
         }
         populateUnits();
-    }) 
+    })
 }
 
 function convert() {
@@ -26,7 +26,7 @@ function convert() {
     let sym1 = json[unitType][unitName][unitFrom]['unit'];
     let sym2 = json[unitType][unitName][unitTo]['unit'];
     let amount = Number($('#numberBox').val());
-    $('#result').html(amount + sym1 + ' = ' + (valFrom/valTo)*amount + sym2);
+    $('#result').html(amount + sym1 + ' = ' + (valFrom / valTo) * amount + sym2);
 }
 
 function populateUnits() {
@@ -37,7 +37,7 @@ function populateUnits() {
     currentObj = json[unitType][unitName];
     let i = 0;
     for (let name in currentObj) {
-        if(currentObj.hasOwnProperty(name)) {
+        if (currentObj.hasOwnProperty(name)) {
             document.getElementById('typeTo').options[i] = new Option(name, currentObj[name]['value']);
             document.getElementById('typeFrom').options[i] = new Option(name, currentObj[name]['value']);
             i++;
