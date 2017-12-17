@@ -276,16 +276,13 @@
     },
     {
         "temperature": {
-            "celcius": {
-                "value": 274.15,
+            "celsius": {
                 "unit": "C"
             },
             "fahrenheit": {
-                "value": 255.92778,
                 "unit": "F"
             },
             "kelvin": {
-                "value": 1,
                 "unit": "K"
             }
         }
