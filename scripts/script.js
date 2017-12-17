@@ -1,10 +1,5 @@
 let json;
-
 window.addEventListener('load', setup);
-
-$('button#but').on('click', function () {
-    alert('pressed');
-});
 
 function setup() {
     loadCommon();
@@ -12,10 +7,11 @@ function setup() {
 
 function loadCommon() {
     $.getJSON('./data/common.json', function(data) {
+        json = data;
         createDropdown(data);
     });
 }
 
 function createDropdown(data) {
-    
+
 }
