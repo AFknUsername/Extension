@@ -11,14 +11,18 @@ function loadConvertOptions() {
 }
 
 function convert() {
-    let valFrom = Number($('#typeFrom').val());
     let unitFrom = $('#typeFrom').children(':selected')[0].innerHTML;
-    let valTo = Number($('#typeTo').val());
     let unitTo = $('#typeTo').children(':selected')[0].innerHTML;
-    let sym1 = json[unitType][unitName][unitFrom]['unit'];
-    let sym2 = json[unitType][unitName][unitTo]['unit'];
     let amount = Number($('#numberBox').val());
-    $('#result').html(amount + sym1 + ' = ' + (valFrom / valTo) * amount + sym2);
+    if ($('#units').children(':selected')[0].innerHTML === "temperature") {
+        convertTemp(unitFrom, unitTo, amount);
+    } else {
+        let valTo = Number($('#typeTo').val());
+        let valFrom = Number($('#typeFrom').val());
+        let sym1 = json[unitType][unitName][unitFrom]['unit'];
+        let sym2 = json[unitType][unitName][unitTo]['unit'];
+        $('#result').html(amount + sym1 + ' = ' + (valFrom / valTo) * amount + sym2);
+    }
 }
 
 function populateUnits() {
@@ -34,5 +38,18 @@ function populateUnits() {
             document.getElementById('typeFrom').options[i] = new Option(name, currentObj[name]['value']);
             i++;
         }
+    }
+}
+
+function convertTemp(temp1, temp2, amount) {
+    if (temp1 === 'celsius') {
+        let celsius = new Celsius(amount, temp2);
+        celsius.convert();;
+    } else if (temp1 === 'fahrenheit') {
+        let fahrenheit = new Fahrenheit(amount, temp2);
+        fahrenheit.convert();
+    } else {
+        let kelvin = new Kelvin(amount, temp2);
+        kelvin.convert();
     }
 }
