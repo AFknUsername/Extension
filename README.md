@@ -1,5 +1,5 @@
 # UtiliTab
 
-This is my chrome utility "new tab" page.
+This is my browser newTab utility page.
 
 I know my commits are trash.
