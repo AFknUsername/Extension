@@ -21,7 +21,7 @@ function convert() {
         let valFrom = Number($('#typeFrom').val());
         let sym1 = json[unitType][unitName][unitFrom]['unit'];
         let sym2 = json[unitType][unitName][unitTo]['unit'];
-        $('#result').html(amount + ' ' +sym1 + ' = ' + (valFrom / valTo) * amount + ' ' + sym2);
+        $('#result').html(amount + ' ' + sym1 + ' = ' + (valFrom / valTo) * amount + ' ' + sym2);
     }
 }
 
