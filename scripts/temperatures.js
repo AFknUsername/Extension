@@ -20,6 +20,7 @@ class Fahrenheit {
     constructor(amount, tempTo) {
         this.amount = amount;
         this.tempTo = tempTo;
+        this.sym = json[unitType][unitName][tempTo]['unit'];
     }
 
     convert() {
@@ -37,6 +38,7 @@ class Kelvin {
     constructor(amount, tempTo) {
         this.amount = amount;
         this.tempTo = tempTo;
+        this.sym = json[unitType][unitName][tempTo]['unit'];
     }
 
     convert() {
