@@ -2,15 +2,16 @@ class Celsius {
     constructor(amount, tempTo) {
         this.amount = amount;
         this.tempTo = tempTo;
+        this.sym = json[unitType][unitName][tempTo]['unit'];
     }
 
     convert() {
         if (this.tempTo === 'fahrenheit') {
-            console.log((this.amount * (9/5)) + 32);
+            $('#result').html((this.amount * (9/5)) + 32 + ' ' +this.sym);
         } else if(this.tempTo === 'kelvin') {
-            console.log(this.amount + 273.15);
+            $('#result').html(this.amount + 273.15 + ' ' +this.sym);
         } else {
-            console.log(this.amount);
+            $('#result').html(this.amount + ' ' +this.sym);
         }
     }
 }
@@ -23,11 +24,11 @@ class Fahrenheit {
 
     convert() {
         if (this.tempTo === 'fahrenheit') {
-            console.log(this.amount);
+            $('#result').html(this.amount + ' ' +this.sym);
         } else if(this.tempTo === 'kelvin') {
-            console.log((this.amount - 32)*(5/9)+273.15);
+            $('#result').html((this.amount - 32)*(5/9)+273.15 + ' ' +this.sym);
         } else {
-            console.log((this.amount-32)*(5/9));
+            $('#result').html((this.amount-32)*(5/9) + ' ' +this.sym);
         }
     }
 }
@@ -40,11 +41,11 @@ class Kelvin {
 
     convert() {
         if (this.tempTo === 'fahrenheit') {
-            console.log((this.amount - 273.15)*(9/5)+32);
+            $('#result').html((this.amount - 273.15)*(9/5)+32 + ' ' +this.sym);
         } else if(this.tempTo === 'kelvin') {
-            console.log(this.amount);
+            $('#result').html(this.amount + ' ' +this.sym);
         } else {
-            console.log(this.amount - 273.15);
+            $('#result').html(this.amount - 273.15 + ' ' +this.sym);
         }
     }
 }
