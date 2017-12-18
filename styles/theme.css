@@ -1,8 +1,13 @@
 #wrapper {
-    width: 370px;
-    margin: 0;
+    float: left;
 }
 
 #numberBox {
     width: 100px;
+    margin-right: 25px;
+}
+
+#result {
+    font-size: 20;
+    margin: 0;
 }
