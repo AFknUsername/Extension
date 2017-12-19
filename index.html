@@ -13,7 +13,7 @@
 </head>
 
 <body id='body'>
-    <div id='wrapper'>
+    <div id='converter' class='wrapper'>
         <fieldset>
             <legend>Conversion Tool</legend>
             Convert:
@@ -26,14 +26,51 @@
             <br>
             <br>
             <input type='number' value='0' id='numberBox'>
-            <button id='convert'>Convert</button>
+            <span id='convert'>convert</span>
             <p id='result'></p>
         </fieldset>
     </div>
-    <div id='wrapper'>
+    <div id='weather' class='wrapper'>
         <fieldset>
             <legend>Weather</legend>
-            
+            <div id='current'>
+                <div id='weatherInfo'>
+                    <p id='currentTemp'></p>
+                    <p id='sky'></p>
+                    <p id='feelsLike'></p>
+                </div>
+                <div id='weatherCool'>
+                    <img id='skyIcon'>
+                    <p class='weatherSwitch'>show forecast</p>
+                </div>
+            </div>
+            <div id='forecast'>
+                <div id='day0' class='day'>
+                    <p id='weekDay0'></p>
+                    <img id='icon0' class='icon'>
+                    <p id='high0' class='temp'></p>
+                    <p id='low0' class='temp'></p>
+                </div>
+                <div id='day1' class='day'>
+                    <p id='weekDay1'></p>
+                    <img id='icon1' class='icon'>
+                    <p id='high1' class='temp'></p>
+                    <p id='low1' class='temp'></p>
+                </div>
+                <div id='day2' class='day'>
+                    <p id='weekDay2'></p>
+                    <img id='icon2' class='icon'>
+                    <p id='high2' class='temp'></p>
+                    <p id='low2' class='temp'></p>
+                </div>
+                <div id='day3' class='day'>
+                    <p id='weekDay3'></p>
+                    <img id='icon3' class='icon'>
+                    <p id='high3' class='temp'></p>
+                    <p id='low3' class='temp'></p>
+                </div>
+                <p class='weatherSwitch'></p>
+            </div>
         </fieldset>
     </div>
 </body>
