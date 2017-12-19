@@ -1,0 +1,44 @@
+let secret = 'c318f7842fd2c890';
+let state;
+
+function getWeather() {
+
+    $.ajax({
+        url: `http://api.wunderground.com/api/${secret}/conditions/q/zmw:00000.94.71612.json`,
+        success: function (result) {
+            let current = result['current_observation'];
+            $('#currentTemp').html(`${current['temp_c']}&#176;`);
+            $('#sky').html(current['weather']);
+            $('#feelsLike').html(`feels like ${current['feelslike_c']}&#176;`);
+            $('#skyIcon').attr("src", current['icon_url']);
+            // console.log(current['icon_url']);
+        }
+    });
+
+    $.ajax({
+        url: `http://api.wunderground.com/api/${secret}/forecast/q/zmw:00000.94.71612.json`,
+        success: function (result) {
+            let forecast = result['forecast']['simpleforecast']['forecastday'];
+            for (let i = 0; i < 4; i++) {
+                $(`#weekDay${i}`).html(forecast[i]['date']['weekday']);
+                $(`#icon${i}`).attr('src' , forecast[i]['icon_url']);
+                $(`#high${i}`).html(`${forecast[i]['high']['celsius']}&#176;`);
+                $(`#low${i}`).html(`${forecast[i]['low']['celsius']}&#176;`);
+            }
+        }
+    });
+}
+
+function switchWeather() {
+    $('#current').toggle();
+    $('#forecast').toggle();
+    switchButton();
+}
+
+function switchButton() {
+    if ($('#current').is(`:visible`)) {
+        $('.weatherSwitch').html(`show forecast`);
+    } else {
+        $('.weatherSwitch').html(`&larr;`);
+    }
+}
