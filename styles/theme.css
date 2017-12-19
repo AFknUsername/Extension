@@ -25,6 +25,7 @@ p {
 #weatherInfo {
     float: left;
     margin-right: 50px;
+    text-align: center;
 }
 
 #currentTemp {
