@@ -1,15 +1,22 @@
 body {
     background-color: #cccccc;
+    font-family: monospace;
+    cursor: default;
 }
 
 fieldset {
     border-width: 1px;
     border-color: black;
+    font-size: 13;
 }
 
 p {
     font-size: 20;
     margin: 0;
+}
+
+legend {
+    font-size: 15;
 }
 
 .wrapper {
@@ -29,7 +36,7 @@ p {
 }
 
 #currentTemp {
-    font-size: 25;
+    font-size: 30;
 }
 
 #sky {
@@ -40,22 +47,18 @@ p {
     font-size: 13;
 }
 
-/* #skyIcon {
-    margin: auto;
-} */
-
 .weatherSwitch {
     float: right;
     position: absolute;
     right: 2;
     bottom: 0;
+    padding: 2px;
     font-size: 13;
     border: 1px solid black;
-    padding: 2px;
 }
 
 .weatherSwitch:hover {
-    background-color: #cccccc;
+    background-color: #bbbbbb;
     cursor: pointer;
 }
 
@@ -74,13 +77,12 @@ p {
 }
 
 #convert:hover {
-    background-color: #cccccc;
+    background-color: #bbbbbb;
     cursor: pointer;
 }
 
 .day {
     float: left;
-    /* margin: 5px; */
     width: 120px;
     text-align: center;
 }
@@ -95,12 +97,71 @@ p {
     text-align: center;
 }
 
-/* #day1 {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
-#day2 {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-} */
+.item {
+    font-size: 15;
+    word-wrap: normal;
+}
+
+.header {
+    margin: 0;
+}
+
+#addItem {
+    font-size: 13;
+    border: 1px solid black;
+    float: left;
+    padding: 2px;
+    padding-bottom: 3px;
+}
+
+#addItem:hover {
+    background-color: #bbbbbb;
+    cursor: pointer;
+}
+
+hr {
+    border: 0.5px solid black;
+    margin-bottom: 0px;
+}
+
+#itemDate {
+    height: 21;
+    width: 130;
+}
+
+.itemDate {
+    /* float: right; */
+    position: absolute;
+    font-size: 15;
+    padding-top: 3px;
+    text-align: absolute;
+    right: 10;
+}
+
+.itemHeader {
+    margin: 0;
+}
+
+.itemRemove {
+    float: right;
+    font-size: 13;
+    border: 1px solid black;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 2px;
+    margin-top: 2px;
+}
+
+.itemRemove:hover {
+    background-color: rgb(255, 133, 133);
+}
+
+li {
+    border-bottom: 1px solid black;
+}
