@@ -11,7 +11,6 @@ function getWeather() {
             $('#sky').html(current['weather']);
             $('#feelsLike').html(`feels like ${current['feelslike_c']}&#176;`);
             $('#skyIcon').attr("src", current['icon_url']);
-            // console.log(current['icon_url']);
         }
     });
 
@@ -20,6 +19,32 @@ function getWeather() {
         success: function (result) {
             let forecast = result['forecast']['simpleforecast']['forecastday'];
             for (let i = 0; i < 4; i++) {
+                
+                $('<div/>', {
+                    class: 'day',
+                    id: `day${i}`,
+                }).appendTo('#forecast');
+
+                $('<p/>', {
+                    class: 'weekDay',
+                    id: `weekDay${i}`,
+                }).appendTo(`#day${i}`);
+
+                $('<img/>', {
+                    class: 'icon',
+                    id: `icon${i}`,
+                }).appendTo(`#day${i}`);
+
+                $('<p/>', {
+                    class: 'temp',
+                    id: `high${i}`,
+                }).appendTo(`#day${i}`);
+
+                $('<p/>', {
+                    class: 'temp',
+                    id: `low${i}`,
+                }).appendTo(`#day${i}`);
+                
                 $(`#weekDay${i}`).html(forecast[i]['date']['weekday']);
                 $(`#icon${i}`).attr('src' , forecast[i]['icon_url']);
                 $(`#high${i}`).html(`${forecast[i]['high']['celsius']}&#176;`);
