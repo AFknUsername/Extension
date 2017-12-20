@@ -7,11 +7,11 @@ class Celsius {
 
     convert() {
         if (this.tempTo === 'fahrenheit') {
-            $('#result').html((this.amount * (9 / 5)) + 32 + ' ' + this.sym);
+            $('#result').html(Number((this.amount * (9 / 5)) + 32).toFixed(2) + ' ' + this.sym);
         } else if (this.tempTo === 'kelvin') {
-            $('#result').html(this.amount + 273.15 + ' ' + this.sym);
+            $('#result').html(Number(this.amount + 273.15).toFixed(2) + ' ' + this.sym);
         } else {
-            $('#result').html(this.amount + ' ' + this.sym);
+            $('#result').html(Number(this.amount).toFixed(2) + ' ' + this.sym);
         }
     }
 }
@@ -25,11 +25,11 @@ class Fahrenheit {
 
     convert() {
         if (this.tempTo === 'fahrenheit') {
-            $('#result').html(this.amount + ' ' + this.sym);
+            $('#result').html(Number(this.amount).toFixed(2) + ' ' + this.sym);
         } else if (this.tempTo === 'kelvin') {
-            $('#result').html((this.amount - 32) * (5 / 9) + 273.15 + ' ' + this.sym);
+            $('#result').html(Number((this.amount - 32) * (5 / 9) + 273.15).toFixed(2) + ' ' + this.sym);
         } else {
-            $('#result').html((this.amount - 32) * (5 / 9) + ' ' + this.sym);
+            $('#result').html(Number((this.amount - 32) * (5 / 9)).toFixed(2) + ' ' + this.sym);
         }
     }
 }
@@ -43,11 +43,11 @@ class Kelvin {
 
     convert() {
         if (this.tempTo === 'fahrenheit') {
-            $('#result').html((this.amount - 273.15) * (9 / 5) + 32 + ' ' + this.sym);
+            $('#result').html(Number((this.amount - 273.15) * (9 / 5) + 32).toFixed(2) + ' ' + this.sym);
         } else if (this.tempTo === 'kelvin') {
-            $('#result').html(this.amount + ' ' + this.sym);
+            $('#result').html(Number(this.amount).toFixed(2) + ' ' + this.sym);
         } else {
-            $('#result').html(this.amount - 273.15 + ' ' + this.sym);
+            $('#result').html(Number(this.amount - 273.15).toFixed(2) + ' ' + this.sym);
         }
     }
 }

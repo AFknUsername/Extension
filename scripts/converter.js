@@ -3,8 +3,8 @@ let json;
 function loadConvertOptions() {
     $.getJSON('./data/common.json', function (data) {
         json = data;
-        for (i = 0; i < json.length; i++) {
-            document.getElementById('units').options[i] = new Option(Object.keys(json[i]), i);
+        for (i = 0; i < data.length; i++) {
+            document.getElementById('units').options[i] = new Option(Object.keys(data[i]), i);
         }
         populateUnits();
     })
