@@ -47,7 +47,6 @@ class Item {
         let currentDate = new Date().getTime();
         let dateArray = this.date.split('-');
         let itemDate = new Date(dateArray[0], dateArray[1] - 1, dateArray[2]).getTime();
-        console.log(itemDate);
         if (itemDate - currentDate < 86400000) {
             $(`#item${this.i}`).css('background-color', '#ff6262');
             return 'yellow';
