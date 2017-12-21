@@ -1,16 +1,15 @@
 window.addEventListener('load', setup);
 
 function setup() {
+    let storage = localStorage;
+    if (storage.todo === null) {
+        storage.todo = JSON.stringify([]);
+    }
     $(`#convert`).click(convert);
     $(`.weatherSwitch`).click(switchWeather);
     $('#addItem').click(addItem);
     $(`#units`).change(populateUnits);
     loadConvertOptions();
     getWeather();
+    populateItems();
 }
-
-Array.prototype.remove = function (from, to) {
-    var rest = this.slice((to || from) + 1 || this.length);
-    this.length = from < 0 ? this.length + from : from;
-    return this.push.apply(this, rest);
-};
