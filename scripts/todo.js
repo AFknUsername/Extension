@@ -58,12 +58,20 @@ class Item {
 
 let itemList = refresh(JSON.parse(localStorage.getItem('todo')));
 
-function refresh(array) {
-    let itemList = [];
-    for (i = 0; i < array.length; i++) {
-        itemList[i] = new Item(array[i].title, array[i].text, array[i].date, array[i].i);
+function refresh() {
+    
+    let array;
+    if (localStorage.todo === undefined) {
+        array = [];
+        return array;
+    } else {
+        array = JSON.parse(localStorage.getItem('todo'));
+        let itemList = [];
+        for (i = 0; i < array.length; i++) {
+            itemList[i] = new Item(array[i].title, array[i].text, array[i].date, array[i].i);
+        }
+        return itemList; 
     }
-    return itemList;
 }
 
 function populateItems() {
