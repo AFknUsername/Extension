@@ -43,17 +43,36 @@ class Item {
         }, removeItem);
     }
 
-    cross() {
-        $(`#header${this.i}`).css({'font-color': 'grey'});
+    checkTime() {
+        let currentDate = new Date().getTime();
+        let dateArray = this.date.split('-');
+        let itemDate = new Date(dateArray[0], dateArray[1] - 1, dateArray[2]).getTime();
+        console.log(itemDate);
+        if (itemDate - currentDate < 86400000) {
+            $(`#item${this.i}`).css('background-color', '#ff6262');
+            return 'yellow';
+        } else if (itemDate - currentDate < 432000000) {
+            $(`#item${this.i}`).css('background-color', '#ffff4f');
+        }
     }
 }
 
-let itemList = [];
+let itemList = refresh(JSON.parse(localStorage.getItem('todo')));
+
+function refresh(array) {
+    let itemList = [];
+    for (i = 0; i < array.length; i++) {
+        itemList[i] = new Item(array[i].title, array[i].text, array[i].date, array[i].i);
+    }
+    return itemList;
+}
 
 function populateItems() {
     for (let item of itemList) {
         item.show();
+        item.checkTime();
     }
+    localStorage.todo = JSON.stringify(itemList);
 }
 
 let counter = itemList.length;
@@ -67,9 +86,13 @@ function addItem() {
         let date = $('#itemDate').val();
         let newItem = new Item(title, text, date, counter);
         itemList.push(newItem);
-        console.log(itemList);
         counter++;
         newItem.show();
+        newItem.checkTime();
+        localStorage.todo = JSON.stringify(itemList);
+        $('input[name="title"]').val('');
+        $('textarea[name="text"]').val('');
+        $('#itemDate').val('');
     }
 }
 
@@ -86,4 +109,3 @@ function removeItem(event) {
     $('#list').empty();
     populateItems();
 }
-
