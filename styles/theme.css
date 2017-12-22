@@ -22,6 +22,10 @@ legend {
     border: 1px solid black;
 }
 
+select {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 .wrapper {
     float: left;
     position: relative;
@@ -31,6 +35,18 @@ legend {
 #numberBox {
     width: 100px;
     margin-right: 25px;
+    background-color: rgba(255, 255, 255, 0.50);
+    border: 1px solid rgb(169, 169, 169);
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.50);
+    border: 1px solid rgb(169, 169, 169);
+}
+
+textarea {
+    background-color: rgba(255, 255, 255, 0.50);
+    border: 1px solid rgb(169, 169, 169);
 }
 
 #weatherInfo {
@@ -62,7 +78,7 @@ legend {
 }
 
 .weatherSwitch:hover {
-    background-color: #eeeeee;
+    background-color: rgba(238, 238, 238, 0.5);
     cursor: pointer;
 }
 
@@ -81,7 +97,7 @@ legend {
 }
 
 #convert:hover {
-    background-color: #eeeeee;
+    background-color: rgba(238, 238, 238, 0.5);
     cursor: pointer;
 }
 
@@ -125,7 +141,7 @@ ul {
 }
 
 #addItem:hover {
-    background-color: #eeeeee;
+    background-color: rgba(238, 238, 238, 0.5);
     cursor: pointer;
 }
 
@@ -153,7 +169,7 @@ hr {
 .itemRemove {
     float: right;
     font-size: 13;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding-left: 4px;
     padding-right: 4px;
     padding-bottom: 2px;
@@ -162,7 +178,7 @@ hr {
 }
 
 .itemRemove:hover {
-    background-color: rgba(255, 133, 133, 1);
+    color: rgb(255, 0, 0);
 }
 
 li {
