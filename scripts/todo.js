@@ -25,7 +25,7 @@ class Item {
         $('<p/>', {
             class: 'itemRemove',
             id: `remove${this.i}`,
-            text: 'x'
+            text: 'X'
         }).appendTo(`#header${this.i}`);
 
         $('<span/>', {
