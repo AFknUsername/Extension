@@ -8,6 +8,7 @@ fieldset {
     border-width: 1px;
     border-color: black;
     font-size: 13;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 p {
@@ -17,6 +18,8 @@ p {
 
 legend {
     font-size: 15;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid black;
 }
 
 .wrapper {
@@ -59,7 +62,7 @@ legend {
 }
 
 .weatherSwitch:hover {
-    background-color: #bbbbbb;
+    background-color: #eeeeee;
     cursor: pointer;
 }
 
@@ -78,7 +81,7 @@ legend {
 }
 
 #convert:hover {
-    background-color: #bbbbbb;
+    background-color: #eeeeee;
     cursor: pointer;
 }
 
@@ -122,7 +125,7 @@ ul {
 }
 
 #addItem:hover {
-    background-color: #bbbbbb;
+    background-color: #eeeeee;
     cursor: pointer;
 }
 
@@ -137,11 +140,9 @@ hr {
 }
 
 .itemDate {
-    /* float: right; */
     position: absolute;
     font-size: 15;
     padding-top: 3px;
-    /* text-align: absolute; */
     right: 12;
 }
 
@@ -161,9 +162,32 @@ hr {
 }
 
 .itemRemove:hover {
-    background-color: rgb(255, 133, 133);
+    background-color: rgba(255, 133, 133, 1);
 }
 
 li {
     border-bottom: 1px solid black;
+}
+
+#changeBG {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 1px solid black;
+    padding: 2px;
+}
+
+#popUp {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    border: 1px solid black;
+}
+
+#changeImage {
+    border: 1px solid black;
+    padding: 2px;
+    padding-bottom: 0;
+    float: right;
 }
