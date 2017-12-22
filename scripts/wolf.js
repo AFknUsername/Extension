@@ -1,0 +1,11 @@
+var d = document;
+var e = d.createElement('iframe');
+e.scroll = "no";
+e.frameBorder = 0;
+e.marginWidth = 0;
+e.marginTop = 5;
+e.allowTransparency = "true";
+e.src = 'https://www.wolframalpha.com/Calculate/embed/medium.jsp';
+e.width = 210;
+e.height = 86;
+d.getElementById('WolframAlphaScript').parentNode.appendChild(e);

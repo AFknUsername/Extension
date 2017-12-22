@@ -8,5 +8,6 @@
 	"permissions": [
 		"http://*/",
 		"https://*/"
-	]
+	],
+	"content_security_policy": "script-src 'self' https://www.wolframalpha.com/*; object-src 'self'"
 }
