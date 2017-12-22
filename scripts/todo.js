@@ -4,7 +4,7 @@ class Item {
         this.text = text;
         this.date = date;
         this.i = index;
-    }    
+    }
 
     show() {
         $('<li/>', {
@@ -59,7 +59,7 @@ class Item {
 let itemList = refresh(JSON.parse(localStorage.getItem('todo')));
 
 function refresh() {
-    
+
     let array;
     if (localStorage.todo === undefined) {
         array = [];
@@ -70,7 +70,7 @@ function refresh() {
         for (i = 0; i < array.length; i++) {
             itemList[i] = new Item(array[i].title, array[i].text, array[i].date, array[i].i);
         }
-        return itemList; 
+        return itemList;
     }
 }
 

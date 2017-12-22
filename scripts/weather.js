@@ -19,7 +19,7 @@ function getWeather() {
         success: function (result) {
             let forecast = result['forecast']['simpleforecast']['forecastday'];
             for (let i = 0; i < 4; i++) {
-                
+
                 $('<div/>', {
                     class: 'day',
                     id: `day${i}`,
@@ -44,9 +44,9 @@ function getWeather() {
                     class: 'temp',
                     id: `low${i}`,
                 }).appendTo(`#day${i}`);
-                
+
                 $(`#weekDay${i}`).html(forecast[i]['date']['weekday']);
-                $(`#icon${i}`).attr('src' , forecast[i]['icon_url']);
+                $(`#icon${i}`).attr('src', forecast[i]['icon_url']);
                 $(`#high${i}`).html(`${forecast[i]['high']['celsius']}&#176;`);
                 $(`#low${i}`).html(`${forecast[i]['low']['celsius']}&#176;`);
             }
