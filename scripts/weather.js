@@ -18,7 +18,7 @@ function getWeather() {
         url: `http://api.wunderground.com/api/${secret}/forecast/q/zmw:00000.94.71612.json`,
         success: function (result) {
             let forecast = result['forecast']['simpleforecast']['forecastday'];
-            for (let i = 0; i < 4; i++) {
+            for (let i = 1; i < 4; i++) {
 
                 $('<div/>', {
                     class: 'day',
@@ -50,6 +50,18 @@ function getWeather() {
                 $(`#high${i}`).html(`${forecast[i]['high']['celsius']}&#176;`);
                 $(`#low${i}`).html(`${forecast[i]['low']['celsius']}&#176;`);
             }
+                $('<span/>', {
+                    class: 'temp',
+                    id: 'currentHi',
+                }).appendTo('#weatherInfo');
+
+                $('<span/>', {
+                    class: 'temp',
+                    id: 'currentLo',
+                }).appendTo('#weatherInfo');
+
+                $(`#currentHi`).html(`High:${forecast[0]['high']['celsius']}&#176;\n`);
+                $(`#currentLo`).html(`Low:${forecast[0]['low']['celsius']}&#176;`);
         }
     });
 }
