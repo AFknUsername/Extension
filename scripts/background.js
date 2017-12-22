@@ -6,7 +6,6 @@ function fetchIMOTD() {
         success: function (result) {
             let imageURL = `http://bing.com/${result['images'][0]['url']}`; 
             $('body').css({"background": `url(${imageURL}) no-repeat center`});
-            $('body').css({"background-size": `cover`});
         }
     });
 }
