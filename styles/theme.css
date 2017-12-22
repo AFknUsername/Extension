@@ -1,5 +1,7 @@
 body {
     background-color: #cccccc;
+    background: no-repeat center;
+    background-size: cover;
     font-family: monospace;
     cursor: default;
 }
