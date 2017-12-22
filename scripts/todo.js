@@ -48,10 +48,10 @@ class Item {
         let dateArray = this.date.split('-');
         let itemDate = new Date(dateArray[0], dateArray[1] - 1, dateArray[2]).getTime();
         if (itemDate - currentDate < 86400000) {
-            $(`#item${this.i}`).css('background-color', '#ff6262');
+            $(`#item${this.i}`).css('background-color', 'rgba(255, 98, 98, 0.75)');
             return 'yellow';
         } else if (itemDate - currentDate < 432000000) {
-            $(`#item${this.i}`).css('background-color', '#ffff4f');
+            $(`#item${this.i}`).css('background-color', 'rgba(255, 255, 79, 0.75)');
         }
     }
 }
