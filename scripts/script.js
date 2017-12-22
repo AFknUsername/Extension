@@ -7,5 +7,6 @@ function setup() {
     $(`#units`).change(populateUnits);
     loadConvertOptions();
     getWeather();
-    //populateItems();
+    populateItems();
+    fetchIMOTD();
 }
